@@ -171,22 +171,6 @@ return {
     },
   },
 
-  -- ── Copilot (optional, comment out if not using) ─────────────
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   cmd  = "Copilot",
-  --   event = "InsertEnter",
-  --   opts = {
-  --     suggestion  = { enabled = false },  -- use blink.cmp source instead
-  --     panel       = { enabled = false },
-  --     filetypes   = { yaml = true, markdown = true, ["*"] = true },
-  --   },
-  -- },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   dependencies = "zbirenbaum/copilot.lua",
-  --   config       = true,
-  -- },
   {
     "alexghergh/nvim-tmux-navigation",
     event = "VeryLazy",

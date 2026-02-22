@@ -79,6 +79,14 @@ au("FileType", {
   end,
 })
 
+au("FileType", {
+  group = aug("conceal_noice", { clear = true }),
+  pattern = { "noice", "help", "checkhealth" },
+  callback = function()
+    vim.opt_local.conceallevel = 2
+  end,
+})
+
 -- ── Terminal: no line numbers, enter insert ─────────────────
 au({ "TermOpen", "BufEnter" }, {
   group = aug("terminal_settings", { clear = true }),
