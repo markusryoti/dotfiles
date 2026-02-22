@@ -244,7 +244,16 @@ return {
     opts = {
       indent = { char = "│", tab_char = "│" },
       scope = { show_start = false, show_end = false },
-      exclude = { filetypes = { "help", "dashboard", "neo-tree", "Trouble", "lazy", "notify" } },
+      exclude = {
+        filetypes = {
+          "help",
+          "dashboard",
+          "neo-tree",
+          "Trouble",
+          "lazy",
+          "notify",
+        },
+      },
     },
   },
 

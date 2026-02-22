@@ -145,6 +145,9 @@ return {
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       -- local lspconfig = require("lspconfig")
 
+      -- Disable and use Rustaceanvim
+      vim.lsp.enable("rust_analyzer", false)
+
       -- ── Go ─────────────────────────────────────────────────
       vim.lsp.config("gopls", {
         capabilities = capabilities,
@@ -272,7 +275,6 @@ return {
         "docker_compose_language_service",
       }) do
         vim.lsp.config(server, { capabilities = capabilities })
-        -- lspconfig[server].setup({ capabilities = capabilities })
       end
     end,
   },
@@ -318,7 +320,7 @@ return {
       },
     },
     config = function(_, opts)
-      vim.g.rustaceanvim = vim.tbl_deep_extend("keep", vim.g.rustaceanvim or {}, opts or {})
+      vim.rustaceanvim = vim.tbl_deep_extend("keep", vim.g.rustaceanvim or {}, opts or {})
     end,
   },
 
