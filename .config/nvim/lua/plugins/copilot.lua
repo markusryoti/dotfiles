@@ -10,8 +10,7 @@ return {
     },
   },
   {
-    "zbirenbaum/copilot-cmp",
+    "giuxtaposition/blink-cmp-copilot",
     dependencies = "zbirenbaum/copilot.lua",
-    config = true,
   },
 }

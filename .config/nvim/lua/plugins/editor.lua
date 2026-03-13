@@ -343,7 +343,7 @@ return {
     version = "*",
     keys = {
       {
-        "<C-\\>",
+        "<C-t>",
         "<cmd>ToggleTerm<CR>",
         mode = { "n", "t" },
         desc = "Toggle terminal",
@@ -372,14 +372,5 @@ return {
   -- ── Better yank ring ────────────────────────────────────────
   {
     "gbprod/yanky.nvim",
-    dependencies = { "kkharji/sqlite.lua" },
-    opts = { ring = { storage = "sqlite" } },
-    keys = {
-      { "p", "<Plug>(YankyPutAfter)", mode = { "n", "x" }, desc = "Yank put after" },
-      { "P", "<Plug>(YankyPutBefore)", mode = { "n", "x" }, desc = "Yank put before" },
-      { "]p", "<Plug>(YankyCycleForward)", desc = "Cycle yank forward" },
-      { "[p", "<Plug>(YankyCycleBackward)", desc = "Cycle yank backward" },
-      { "<leader>sy", "<cmd>YankyRingHistory<CR>", desc = "Yank history" },
-    },
   },
 }

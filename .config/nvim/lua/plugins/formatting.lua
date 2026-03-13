@@ -30,7 +30,7 @@ return {
         lua = { "stylua" },
         sh = { "shfmt" },
         toml = { "taplo" },
-        sql = { "sqlfmt" },
+        -- sql = { "sqlfmt" },
         ["_"] = { "trim_whitespace" }, -- fallback for all others
       },
       -- Format on save

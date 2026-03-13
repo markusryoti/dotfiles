@@ -8,6 +8,7 @@ return {
     dependencies = {
       "rafamadriz/friendly-snippets", -- VSCode-style snippets
       "L3MON4D3/LuaSnip", -- snippet engine
+      { "saghen/blink.compat", version = "*", opts = {} },
     },
     opts = {
       keymap = {
@@ -25,12 +26,18 @@ return {
         nerd_font_variant = "mono",
       },
       sources = {
-        default = { "lsp", "path", "snippets", "buffer", "lazydev" },
+        default = { "lsp", "path", "snippets", "buffer", "lazydev", "copilot" },
         providers = {
           lazydev = {
             name = "LazyDev",
             module = "lazydev.integrations.blink",
             score_offset = 100, -- prioritize lazydev over LSP for lua
+          },
+          copilot = {
+            name = "copilot",
+            module = "blink-cmp-copilot",
+            score_offset = 90,
+            async = true,
           },
         },
       },
